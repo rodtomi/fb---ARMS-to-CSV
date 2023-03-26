@@ -18,8 +18,6 @@ lbl_txtbx = Label(window, text="Seleccionar Archivo ...", bg="white")
 lbl_txtbx.grid(column = 0, row = 2, padx = 20, pady = 20)
 
 # Generate Browse Button
-
-
 btn_Browse = Button(window, text='Buscar Archivo ...', command = fileDialog(lbl_txtbx))
 btn_Browse.grid(column = 0, row = 3, padx = 20, pady = 20)
 
