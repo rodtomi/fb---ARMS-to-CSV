@@ -95,7 +95,10 @@ def btn_Check_clicked():
         v_Subject = str(sh.cell(curr_row - 1, col_FlightDetails).value) + ' ' + str(
             sh.cell(curr_row, col_FlightDetails).value)
         if v_Subject == "None None":
-            v_Subject = str(sh.cell(curr_row - 1, col_TrgRemarks).value.replace(",", " - "))
+            if str(sh.cell(curr_row - 1, col_TrgRemarks).value) == "None":
+                v_Subject = "GUARDIA"
+            else:
+                v_Subject = str(sh.cell(curr_row - 1, col_TrgRemarks).value.replace(",", " - "))
         v_Description = v_Subject
         # ==========================================================================
 
